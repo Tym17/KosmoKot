@@ -7,11 +7,12 @@ $line-height = 1.725
 
 // Colors
 $color-background = #1d1f21
-$color-link = rgba(128, 170, 212, 1) // vimeo: :selection with alpha=1
 $color-text = #c9cacc
 $color-light = #cccccc
 $color-lightest = #eeeeee
-$color-accent = #55aaff
+$color-accent = #AE54FE
+$color-link = desaturate($color-accent, 55%) // vimeo: :selection with alpha=1
+$color-shadowbackground = mix(tint($color-background, 30), $color-accent, 60)
 $ease-in-sine = cubic-bezier(0.47, 0, 0.745, 0.715)
 
 // Logo

@@ -10,12 +10,12 @@ if (!!$.prototype.justifiedGallery) {
   $('.article-gallery').justifiedGallery(options);
 }
 
-/*
+
 $(document).ready(function() {
 
   /**
    * Shows the responsive navigation menu on mobile.
-   *
+   */
   $("#header > #nav > ul > .icon").click(function() {
     $("#header > #nav > ul").toggleClass("responsive");
   });
@@ -24,11 +24,11 @@ $(document).ready(function() {
   /**
    * Controls the different versions of  the menu in blog post articles 
    * for Desktop, tablet and mobile.
-   *
+   */
   if ($(".post").length) {
     /**
      * Display the menu if the menu icon is clicked.
-     *
+     */
     var menu = $("#menu");
     var menu_icon = $("#menu-icon, #menu-icon-tablet");
     menu_icon.click(function() {
@@ -44,7 +44,7 @@ $(document).ready(function() {
 
     /**
      * Add a scroll listener to the menu to hide/show the navigation links.
-     *
+     */
     if (menu.length) {
       $(window).on('scroll', function() {
         var topDistance = $("#menu > #nav").offset().top;
@@ -71,7 +71,7 @@ $(document).ready(function() {
     /**
      * Show mobile navigation menu after scrolling upwards,
      * hide it again after scrolling downwards.
-     *
+     */
     if ($( "#footer-post").length) {
       var lastScrollTop = 0;
       $(window).on('scroll', function() {
@@ -104,4 +104,3 @@ $(document).ready(function() {
     }
   }
 });
-*/
