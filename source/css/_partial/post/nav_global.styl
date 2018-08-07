@@ -1,0 +1,30 @@
+#nav-global
+  position: sticky
+  top: 1rem
+  margin-left: -13rem
+  margin-top: 2rem
+  display: inline-block
+  float: left
+  border-right: 2px solid $color-accent
+  padding-top: 0.5rem
+  padding-bottom: 0.5rem
+  width: 10.5rem
+  
+  .blog-name
+    font-weight: 700
+
+  ul
+    list-style: none
+    a
+      margin-right: 15px
+      color: $color-accent
+      text-decoration: none
+      background: none
+    a:hover
+      underline(5px, $color-accent)
+
+  li:before
+    content: '/'
+    font-weight: bold
+    margin: 0 5px 0 -15px
+    color: $color-accent

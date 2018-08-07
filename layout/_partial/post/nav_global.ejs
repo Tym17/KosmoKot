@@ -1,0 +1,13 @@
+<div id="nav-global">
+  <div class="blog-name"><%- config.title %></div>
+  
+  <span>
+    <span>
+      <ul>
+        <% for (var i in theme.nav) { %> 
+          <li><a href="<%- url_for(theme.nav[i]) %>"><%= i %></a></li>
+        <% } %>
+      </ul>
+    </span>
+  </span>
+</div>
