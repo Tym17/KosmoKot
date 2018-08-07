@@ -11,12 +11,12 @@ if (!!$.prototype.justifiedGallery) {
 }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   /**
    * Shows the responsive navigation menu on mobile.
    */
-  $("#header > #nav > ul > .icon").click(function() {
+  $("#header > #nav > ul > .icon").click(function () {
     $("#header > #nav > ul").toggleClass("responsive");
   });
 
@@ -31,7 +31,7 @@ $(document).ready(function() {
      */
     var menu = $("#menu");
     var menu_icon = $("#menu-icon, #menu-icon-tablet");
-    menu_icon.click(function() {
+    menu_icon.click(function () {
       if (menu.css('visibility') === 'hidden') {
         menu.css("visibility", "visible");
         menu_icon.addClass('active');
@@ -46,7 +46,7 @@ $(document).ready(function() {
      * Add a scroll listener to the menu to hide/show the navigation links.
      */
     if (menu.length) {
-      $(window).on('scroll', function() {
+      $(window).on('scroll', function () {
         var topDistance = $("#menu > #nav").offset().top;
 
         // hide only the navigation links on desktop
@@ -58,10 +58,10 @@ $(document).ready(function() {
 
         // on tablet, hide the navigation icon as well and show a "scroll to top
         // icon" instead
-        if ( ! $( "#menu-icon" ).is(":visible") && topDistance < 50 ) {
+        if (!$("#menu-icon").is(":visible") && topDistance < 50) {
           $("#menu-icon-tablet").show();
           $("#top-icon-tablet").hide();
-        } else if (! $( "#menu-icon" ).is(":visible") && topDistance > 100) {
+        } else if (!$("#menu-icon").is(":visible") && topDistance > 100) {
           $("#menu-icon-tablet").hide();
           $("#top-icon-tablet").show();
         }
@@ -72,12 +72,12 @@ $(document).ready(function() {
      * Show mobile navigation menu after scrolling upwards,
      * hide it again after scrolling downwards.
      */
-    if ($( "#footer-post").length) {
+    if ($("#footer-post").length) {
       var lastScrollTop = 0;
-      $(window).on('scroll', function() {
+      $(window).on('scroll', function () {
         var topDistance = $(window).scrollTop();
 
-        if (topDistance > lastScrollTop){
+        if (topDistance > lastScrollTop) {
           // downscroll -> show menu
           $("#footer-post").hide();
         } else {
@@ -103,4 +103,32 @@ $(document).ready(function() {
       });
     }
   }
+
+  /**
+   * Reading progress bar
+   */
+  var getMax = function () {
+    return $(document).height() - $(window).height();
+  }
+
+  var getValue = function () {
+    return $(window).scrollTop();
+  }
+
+  // Browser supports progress element
+  let progressBar = $('#readingBar');
+
+  // Set the Max attr for the first time
+  progressBar.attr({ max: getMax() });
+
+  $(document).on('scroll', function () {
+    // On scroll only Value attr needs to be calculated
+    progressBar.attr({ value: getValue() });
+  });
+
+  $(window).resize(function () {
+    // On resize, both Max/Value attr needs to be calculated
+    progressBar.attr({ max: getMax(), value: getValue() });
+  });
+
 });

@@ -8,10 +8,11 @@
         <%- partial('_partial/post/date', { post: page, class_name: 'postdate' }) %>
         <%- partial('_partial/post/tag') %>
         <div id="readtime"><%- readingTime(page.content) %></div>
-      </div>
-    </header>
-    <%- partial('_partial/post/gallery') %>
-    <div class="content" itemprop="articleBody">
+        </div>
+        </header>
+        <%- partial('_partial/post/gallery') %>
+        <%- partial('_partial/post/progressbar') %>
+        <div class="content" itemprop="articleBody">
       <%- page.content %>
     </div>
   </article>
