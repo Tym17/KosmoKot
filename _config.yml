@@ -5,10 +5,17 @@ nav:
   Projects: http://github.com/Tym17
 
 feed: 
-
 projects_url: http://github.com/Tym17
 
 customize:
+    gravatar:
+        email:
+    logo:
+        enabled: false
+        width: 50
+        height: 50
+        url: /images/logo.png
+        gravatar: false
     favicon:
       # eg. generate with http://realfavicongenerator.net/
       desktop:
