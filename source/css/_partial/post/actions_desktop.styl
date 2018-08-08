@@ -135,11 +135,15 @@
     #actions
       display: none
 
+@media screen and (min-width: 1024px)
+  #header-post
+    display: none
+    visibility: none
+
 @media screen and (max-width:1199px)
   #header-post
     #toc
       display: none
-
 
 @media screen and (min-width:900px)
   #header-post
@@ -148,6 +152,12 @@
     #top-icon-tablet
       display: none !important
 
+@media screen and (max-width: 780px)
+  #header-post
+    #top-icon-tablet
+      display: none !important
+
+/*
 @media screen and (min-width:1199px)
   #header-post
     #actions
@@ -160,3 +170,4 @@
         margin-right: 2rem
         font-style: italic
         display: inline
+*/
