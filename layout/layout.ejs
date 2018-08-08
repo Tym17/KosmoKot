@@ -8,6 +8,7 @@
     <div class="content index width mx-auto px2 my4">
         <% if (is_post()) { %>
           <%- partial('_partial/post/nav_global') %>
+          <%- partial('_partial/post/nav_local') %>
         <% } %>
         <% if (!is_post()) { %>
           <%- partial('_partial/header') %>
