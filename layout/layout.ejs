@@ -6,12 +6,22 @@
       <%- partial('_partial/post/actions_desktop') %>
     <% } %>
     <div class="content index width mx-auto px2 my4">
+        <%- partial('_partial/post/nav_global') %>
         <% if (is_post()) { %>
-          <%- partial('_partial/post/nav_global') %>
           <%- partial('_partial/post/nav_local') %>
         <% } %>
         <% if (!is_post()) { %>
-          <%- partial('_partial/header') %>
+        <%- partial('_partial/header') %>
+          <% if (is_home()) { %>
+            <h1 id="desktoptitle"><%- config.title %></h1>
+          <% } else { %>
+            <h1 id="pagetitle" itemprop="name headline">
+              <%= page.title %>
+            </h1>
+            <% if (page.description) { %>
+              <div id="pagedesc" ><%= page.description %></div>
+            <% } %>
+          <% } %>
         <% } %>
         <%- body %>
     </div>

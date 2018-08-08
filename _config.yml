@@ -4,17 +4,11 @@ nav:
   Writing: /archives/
   Projects: http://github.com/Tym17
 
+feed: 
+
 projects_url: http://github.com/Tym17
 
 customize:
-    gravatar:
-        email:
-    logo:
-        enabled: true
-        width: 50
-        height: 50
-        url: /images/logo.png
-        gravatar: false
     favicon:
       # eg. generate with http://realfavicongenerator.net/
       desktop:
@@ -31,9 +25,6 @@ customize:
     show_all_posts: false
     post_count: 5
     highlight: rainbow
-
-# RSS
-rss:
 
 plugins:
     disqus_shortname: # Disqus Comments Shortname

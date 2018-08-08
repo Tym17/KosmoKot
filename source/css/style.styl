@@ -24,14 +24,30 @@ body
   font-weight: 400
   line-height: $line-height
   text-rendering: geometricPrecision
-  min-height: 100%
   display: flex
   flex-direction: column
   antialias()
 
+  
+
 .content
   flex: 1
   @extend $base-style
+
+  #desktoptitle
+    color: $color-text
+    letter-spacing: 0.01em;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+  
+  @media screen and (max-width: 1024px)
+    #desktoptitle
+      display: none
+      visibility: hidden
 
   p
     hyphens(auto)
