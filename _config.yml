@@ -34,6 +34,11 @@ customize:
     highlight: rainbow
 
 plugins:
+    # Github Issues -> comments
+    github_comments: Tym17/KosmoKot # Github repo for mirroring Issues to comments
+    github_admins:
+    - Tym17 # add your Github name or more if you want admin highlight on comments
+
     disqus_shortname: # Disqus Comments Shortname
     google_analytics: #UA-86660611-1 # enter the tracking ID for your Google Analytics
 

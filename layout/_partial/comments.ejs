@@ -1,9 +1,8 @@
 <% if(page.comments){ %>
     <% if (theme.plugins.disqus_shortname) { %>
-        <div class="blog-post-comments">
-            <div id="disqus_thread">
-                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            </div>
-        </div>
+      <%- partial('_partial/_comments/disqus') %>
+    <% } %>
+    <% if (theme.plugins.github_comments && page.gh_issue) {%>
+      <%- partial('_partial/_comments/github') %>
     <% } %>
 <% } %>

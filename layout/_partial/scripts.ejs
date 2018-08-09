@@ -45,7 +45,7 @@
     </script>
 <% } %>
 <!-- Disqus Comments -->
-<% if (theme.plugins.disqus_shortname){ %>
+<% if (theme.plugins.disqus_shortname && page.comments){ %>
     <script type="text/javascript">
         var disqus_shortname = '<%= theme.plugins.disqus_shortname %>';
 
@@ -57,4 +57,9 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         }());
     </script>
+<% } %>
+
+<!-- Github Comments -->
+<% if (theme.plugins.github_comments && page.gh_issue && page.comments) {%>
+    <%- partial('_partial/_comments/githubjs') %>
 <% } %>

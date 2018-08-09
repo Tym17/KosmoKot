@@ -1,2 +1,71 @@
 .blog-post-comments
-    margin-top: 4rem
+  margin-top: 3rem
+    
+  #github-comments
+    color: $color-date
+    font-style: italic
+    text-align: center
+
+    #ghcom
+      font-style: normal;
+
+  .mod-border
+    border-left: 2px solid $color-text !important
+
+  .admin-border
+    border-left: 2px solid $color-accent !important
+
+  .comment
+    font-style: normal;
+    border: 1px dashed $color-date
+    border-left: 2px solid $color-date
+    margin-top: 5px
+    margin-bottom: 10px
+    padding: 5px
+    padding-left: 10px
+    padding-right: 10px
+    text-align: left
+
+    .comment-head
+      padding-bottom: 5px
+
+    .author-name,
+    .comment-date
+      display: inline
+      margin-top: 3px
+      margin-bottom: 3px
+
+    .comment-date
+      margin-left: 7px
+
+    img
+      max-width: 3rem
+      max-height: 3rem
+      margin-top: 5px
+      margin-bottom: 5px
+
+    .comment-body
+      max-width: 100%
+      width: 100%
+      display: flex
+      flex-direction: row
+
+    .comment-content
+      width: 31.5rem
+      text-align: justify
+      color: $color-text
+      margin-left: auto
+
+@media screen and (max-width: 770px)
+  .blog-post-comments
+    .comment
+      margin-left: -20px
+      margin-right: -20px
+
+      .comment-content
+        width: 100%
+
+      .comment-head
+        border-bottom: 1px solid mix($color-background, $color-date, 60)
+      img
+        display: none
