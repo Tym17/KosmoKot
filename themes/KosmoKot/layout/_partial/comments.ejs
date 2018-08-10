@@ -1,0 +1,8 @@
+<% if(page.comments){ %>
+    <% if (theme.plugins.disqus_shortname) { %>
+      <%- partial('_partial/_comments/disqus') %>
+    <% } %>
+    <% if (theme.plugins.github_comments && page.gh_issue) {%>
+      <%- partial('_partial/_comments/github') %>
+    <% } %>
+<% } %>
