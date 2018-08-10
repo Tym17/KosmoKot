@@ -59,7 +59,9 @@
 
             var commentDate = document.createElement('div');
             commentDate.className = 'comment-date';
-            commentDate.appendChild(toText(x.updated_at));
+            var utcDate = new Date(x.updated_at);
+            var localDate = new Date(utcDate.toLocaleString());
+            commentDate.innerHTML = localDate.toLocaleString();
             commentHead.appendChild(commentDate);
 
             var picture = document.createElement('img');
